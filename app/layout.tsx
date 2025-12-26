@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Manrope, Playfair_Display } from "next/font/google";
+import { Manrope, Rock_Salt } from "next/font/google";
+
+import { siteData } from "@/lib/siteData";
 
 import "./globals.css";
 
@@ -11,45 +13,36 @@ const sans = Manrope({
   display: "swap",
 });
 
-const display = Playfair_Display({
+const display = Rock_Salt({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["600", "700"],
+  weight: ["400"],
   display: "swap",
 });
 
-const title = "Cristian Wosniak Fitness | CW Life";
-const description =
-  "Entrenamiento personalizado online o presencial para transformar tu cuerpo, tus hábitos y tu mentalidad. Planes premium listos para convertir por WhatsApp.";
-const siteUrl = "https://www.cristianwosniakcoach.online";
+const title = siteData.meta.title;
+const description = siteData.meta.description;
+const siteUrl = `https://${siteData.meta.domain}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: title,
-    template: "%s | Cristian Wosniak Fitness",
+    template: "%s | CW Life",
   },
   description,
-  keywords: [
-    "entrenamiento personalizado",
-    "coach fitness",
-    "Buenos Aires",
-    "programa online",
-    "cambio de habitos",
-    "CW Life",
-  ],
   openGraph: {
     type: "website",
     url: siteUrl,
     title,
-    siteName: "Cristian Wosniak Fitness",
+    siteName: "CW Life",
     description,
     images: [
       {
         url: "/og-default.svg",
         width: 1200,
         height: 630,
-        alt: "Cristian Wosniak Fitness",
+        alt: "CW Life",
       },
     ],
   },
@@ -64,29 +57,27 @@ const structuredData = {
     {
       "@type": "Person",
       name: "Cristian Wosniak",
-      jobTitle: "Coach y personal trainer",
+      jobTitle: "Coach y fundador CW Life",
       url: siteUrl,
-      telephone: "+54 9 11 5555 5555",
+      telephone: siteData.contact.phone,
       image: `${siteUrl}/og-default.svg`,
       sameAs: [siteUrl],
     },
     {
       "@type": "LocalBusiness",
-      name: "Cristian Wosniak Fitness",
+      name: "CW Life",
       url: siteUrl,
       image: `${siteUrl}/og-default.svg`,
-      telephone: "+54 9 11 5555 5555",
-      email: "hola@cristianwosniakcoach.online",
+      telephone: siteData.contact.phone,
+      email: siteData.contact.email,
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Av. del Libertador 1234",
-        addressLocality: "Buenos Aires",
+        addressLocality: siteData.contact.address,
         addressCountry: "AR",
       },
+      description: siteData.meta.description,
       priceRange: "$$",
       areaServed: "Servicios online y presencial en Buenos Aires",
-      description:
-        "Entrenamiento personalizado, planes de nutrición y programa Reconstruirte.",
     },
   ],
 };
@@ -98,7 +89,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${sans.variable} ${display.variable} min-h-screen bg-background text-foreground antialiased`}>
+      <body
+        className={`${sans.variable} ${display.variable} bg-background text-foreground antialiased`}
+        suppressHydrationWarning
+      >
         {children}
         <Script
           id="schema-data"
