@@ -1,0 +1,26 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Cristian Wosniak Fitness</title>
+  <desc id="desc">Landing de Cristian Wosniak Fitness y programa CW Life</desc>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f9c6a" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#0b1c26" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="230" cy="160" r="180" fill="url(#glow)"/>
+  <circle cx="980" cy="520" r="200" fill="url(#glow)"/>
+  <text x="120" y="320" fill="#c6ffe7" font-family="Manrope, 'Helvetica Neue', Arial, sans-serif" font-size="64" font-weight="800" letter-spacing="-1.5">
+    Cristian Wosniak Fitness
+  </text>
+  <text x="120" y="380" fill="#e7f8f0" font-family="Manrope, 'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="500">
+    Entrenamiento personalizado · Programa online y presencial
+  </text>
+  <text x="120" y="440" fill="#d5e5dd" font-family="Manrope, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="600">
+    CTA directo a WhatsApp · Resultados medibles · Estética premium
+  </text>
+</svg>
