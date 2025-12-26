@@ -12,9 +12,9 @@ const shineButtonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] shadow-[0_10px_40px_-15px_rgba(247,200,0,0.6)] hover:translate-y-[-1px] active:translate-y-[0px]",
+          "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:translate-y-[-1px] active:translate-y-[0px] hover:shadow-[0_16px_40px_-24px_rgba(247,200,0,0.55)]",
         outline:
-          "border border-[hsl(var(--primary))]/40 bg-transparent text-foreground hover:border-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))]/10",
+          "bg-transparent text-foreground hover:bg-white/10 hover:shadow-[0_12px_30px_-24px_rgba(247,200,0,0.5)]",
       },
       size: {
         sm: "px-4 py-2 text-sm",
