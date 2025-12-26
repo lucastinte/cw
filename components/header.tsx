@@ -17,7 +17,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-lg shadow-[0_8px_30px_rgba(0,0,0,0.35)]">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-lg shadow-[0_8px_30px_rgba(0,0,0,0.35)] font-body">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
         <Link href="#hero" className="flex items-center gap-3">
           <span className="rounded-full bg-[hsl(var(--primary))]/15 px-4 py-2 text-lg font-accent text-[hsl(var(--primary))]">
