@@ -22,9 +22,10 @@ export function MediaMosaic({ className }: { className?: string }) {
         <div
           key={`${src}-${idx}`}
           className={cn(
-            "relative overflow-hidden rounded-3xl border border-[hsl(var(--border))]/60 bg-muted/60 soft-shadow",
+            "relative overflow-hidden rounded-3xl bg-muted/40",
             idx === 0 || idx === 3 ? "md:col-span-2" : "md:col-span-2 md:row-span-1"
           )}
+          style={{ minHeight: idx === 0 || idx === 3 ? "360px" : "280px" }}
         >
           <Image
             src={src}
