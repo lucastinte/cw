@@ -18,10 +18,10 @@ const config: Config = {
   	},
   	extend: {
   		fontFamily: {
-  			body: ["var(--font-body)", "Inter", "system-ui", "sans-serif"],
-  			heading: ["var(--font-heading)", "Space Grotesk", "Inter", "sans-serif"],
+  			body: ["var(--font-body)", "Bangers", "cursive"],
+  			heading: ["var(--font-heading)", "Bangers", "cursive"],
   			accent: ["var(--font-accent)", "Rock Salt", "cursive"],
-  			sans: ["var(--font-body)", "Inter", "system-ui", "sans-serif"]
+  			sans: ["var(--font-body)", "Bangers", "cursive"]
   		},
   		colors: {
   			border: 'hsl(var(--border))',

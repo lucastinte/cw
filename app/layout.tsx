@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter, Rock_Salt, Space_Grotesk } from "next/font/google";
+import { Bangers, Rock_Salt } from "next/font/google";
 
 import { siteData } from "@/lib/siteData";
 
 import "./globals.css";
 
-const body = Inter({
+const body = Bangers({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400"],
   display: "swap",
 });
 
-const heading = Space_Grotesk({
+const heading = Bangers({
   variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400"],
   display: "swap",
 });
 
