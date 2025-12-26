@@ -26,7 +26,7 @@ export const siteData = {
     chips: ["Plan a medida", "Seguimiento", "Hábitos"],
     primaryCta: "Agendar por WhatsApp",
     secondaryCta: "Ver planes",
-    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1600&q=80",
+    image: "/hombre-entrenando-en-la-vista-frontal-del-gimnasio.jpg",
     fallback: "https://source.unsplash.com/1600x2000/?fitness,coach,personal-trainer",
   },
   sections: {
@@ -118,19 +118,19 @@ export const siteData = {
       name: "Juli",
       quote: "Recuperé energía y confianza. La técnica y la nutrición fueron clave para mantener el ritmo.",
       rating: 5,
-      image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80&sat=-10",
+      image: "/mujer-de-tiro-medio-entrenando-con-pesas-rusas.jpg",
     },
     {
       name: "Agus",
       quote: "Seguimiento cercano y ajustes reales. En pocas semanas ya veía progresión en fuerza y control.",
       rating: 5,
-      image: "https://images.unsplash.com/photo-1517960413843-0aee8e2b3285?auto=format&fit=crop&w=1200&q=80",
+      image: "/entrenamiento-de-mujeres-para-el-atletismo.jpg",
     },
     {
       name: "Luis",
       quote: "Volví a entrenar sin dolor y con un plan claro. La comunicación por WhatsApp marca la diferencia.",
       rating: 5,
-      image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=1200&q=80",
+      image: "/hombre-entrenando-en-la-vista-frontal-del-gimnasio.jpg",
     },
   ],
   plans: [
@@ -188,12 +188,12 @@ export const siteData = {
   ],
   media: {
     heroFallbackQueries: ["fitness", "coach"],
-    useRemote: true,
+    useRemote: false,
     localGallery: [
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1445384763658-0400939829cd?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1517960413843-0aee8e2b3285?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1554344058-8d1d1bc7b531?auto=format&fit=crop&w=1400&q=80",
+      "/hombre-entrenando-en-la-vista-frontal-del-gimnasio.jpg",
+      "/mujer-de-tiro-medio-entrenando-con-pesas-rusas.jpg",
+      "/entrenamiento-de-mujeres-para-el-atletismo.jpg",
+      "/trans-1.jpg",
     ],
   },
   contact: {
