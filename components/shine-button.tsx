@@ -39,10 +39,17 @@ export const ShineButton = forwardRef<HTMLButtonElement, ShineButtonProps>(
   ({ className, variant, size, asChild = false, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     return (
-      <Comp className={cn(shineButtonVariants({ variant, size }), "group", className)} ref={ref} {...props}>
-        <span className="relative z-10">{children}</span>
-        <span className="pointer-events-none absolute inset-0 overflow-hidden rounded-full">
-          <span className="absolute left-[-100%] top-0 h-full w-[180%] translate-x-[-120%] skew-x-[-12deg] bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 transition duration-700 group-hover:opacity-100 group-hover:animate-[shine_1.1s_ease-in-out] group-focus-visible:opacity-100 group-focus-visible:animate-[shine_1.1s_ease-in-out]" />
+      <Comp
+        className={cn(shineButtonVariants({ variant, size }), "group", className)}
+        ref={ref}
+        {...props}
+        {...(!asChild && { type: props.type || "button" })}
+      >
+        <span className="relative inline-flex w-full items-center justify-center gap-2">
+          <span className="relative z-10">{children}</span>
+          <span className="pointer-events-none absolute inset-0 overflow-hidden rounded-full">
+            <span className="absolute left-[-100%] top-0 h-full w-[180%] translate-x-[-120%] skew-x-[-12deg] bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 transition duration-700 group-hover:opacity-100 group-hover:animate-[shine_1.1s_ease-in-out] group-focus-visible:opacity-100 group-focus-visible:animate-[shine_1.1s_ease-in-out]" />
+          </span>
         </span>
       </Comp>
     );
