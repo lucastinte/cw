@@ -1,20 +1,27 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Manrope, Rock_Salt } from "next/font/google";
+import { Inter, Rock_Salt, Space_Grotesk } from "next/font/google";
 
 import { siteData } from "@/lib/siteData";
 
 import "./globals.css";
 
-const sans = Manrope({
-  variable: "--font-sans",
+const body = Inter({
+  variable: "--font-body",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const display = Rock_Salt({
-  variable: "--font-display",
+const heading = Space_Grotesk({
+  variable: "--font-heading",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const accent = Rock_Salt({
+  variable: "--font-accent",
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
@@ -90,7 +97,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${sans.variable} ${display.variable} bg-background text-foreground antialiased`}
+        className={`${body.variable} ${heading.variable} ${accent.variable} bg-background text-foreground antialiased`}
         suppressHydrationWarning
       >
         {children}

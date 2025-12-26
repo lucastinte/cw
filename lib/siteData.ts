@@ -19,17 +19,15 @@ export const siteData = {
     { label: "Contacto", href: "#contacto" },
   ],
   hero: {
-    kicker: "CW LIFE",
     title: "Cristian Wosniak Coach",
     subtitle:
       "Entrenamiento Personalizado Online o Presencial para alcanzar tus metas de forma eficaz y saludable.",
     manifesto: "…entrenar es solo el comienzo.",
     chips: ["Plan a medida", "Seguimiento", "Hábitos"],
-    heroImage: "/cristian.webp",
-    placeholderImage: "/placeholder-coach.jpg",
     primaryCta: "Agendar por WhatsApp",
     secondaryCta: "Ver planes",
-    highlights: ["Premium coaching", "Acompañamiento real", "Técnica + fuerza"],
+    image: "/cristian.jpg",
+    fallback: "https://source.unsplash.com/1200x1600/?fitness,coach",
   },
   sections: {
     about: {
@@ -186,10 +184,9 @@ export const siteData = {
     },
   ],
   media: {
-    video: "",
-    useRemote: false,
-    randomQueries: ["fitness", "gym", "athlete", "workout"],
-    localImages: ["/cristian.webp", "/og-default.svg", "/og-default.svg", "/og-default.svg"],
+    heroFallbackQueries: ["fitness", "coach"],
+    useRemote: true,
+    localGallery: ["/cristian.jpg", "/og-default.svg", "/og-default.svg", "/og-default.svg"],
   },
   contact: {
     phone: "+54 9 11 5555 5555",

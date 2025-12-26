@@ -17,10 +17,10 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[hsl(var(--primary))]/10 bg-background/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-[hsl(var(--border))]/40 bg-background/80 backdrop-blur-xl">
       <div className="container flex items-center justify-between py-4">
         <Link href="#hero" className="flex items-center gap-3">
-          <span className="rounded-full bg-[hsl(var(--primary))]/15 px-4 py-2 text-lg font-display text-[hsl(var(--primary))]">
+          <span className="rounded-full bg-[hsl(var(--primary))]/15 px-4 py-2 text-lg font-accent text-[hsl(var(--primary))]">
             {siteData.brand.short}
           </span>
           <div className="leading-tight">
@@ -44,7 +44,7 @@ export function Header() {
         <div className="hidden items-center gap-3 lg:flex">
           <Link
             href="#planes"
-            className="rounded-full border border-[hsl(var(--primary))]/30 px-4 py-2 text-sm font-semibold text-foreground transition hover:border-[hsl(var(--primary))]/60 hover:bg-[hsl(var(--primary))]/10"
+            className="rounded-full border border-[hsl(var(--border))]/40 px-4 py-2 text-sm font-semibold text-foreground transition hover:border-[hsl(var(--primary))]/50 hover:bg-[hsl(var(--primary))]/10"
           >
             Ver planes
           </Link>
@@ -56,7 +56,7 @@ export function Header() {
         </div>
 
         <button
-          className="inline-flex items-center rounded-full border border-[hsl(var(--primary))]/30 p-2 text-foreground lg:hidden"
+          className="inline-flex items-center rounded-full border border-[hsl(var(--border))]/40 p-2 text-foreground lg:hidden"
           onClick={() => setOpen((prev) => !prev)}
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
         >
@@ -64,7 +64,7 @@ export function Header() {
         </button>
       </div>
       {open ? (
-        <div className="border-t border-[hsl(var(--primary))]/10 bg-background/95 px-4 pb-4 pt-2 lg:hidden">
+        <div className="border-t border-[hsl(var(--border))]/40 bg-background/95 px-4 pb-4 pt-2 lg:hidden">
           <div className="flex flex-col gap-2">
             {siteData.nav.map((item) => (
               <Link
