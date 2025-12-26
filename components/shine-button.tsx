@@ -7,14 +7,14 @@ import { forwardRef } from "react";
 import { cn } from "@/lib/utils";
 
 const shineButtonVariants = cva(
-  "relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+  "relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--primary))]/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
   {
     variants: {
       variant: {
         primary:
-          "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:translate-y-[-1px] active:translate-y-[0px] hover:shadow-[0_16px_40px_-24px_rgba(247,200,0,0.55)]",
+          "bg-gradient-to-r from-[hsl(var(--primary))] via-[#ffd442] to-[hsl(var(--primary))] text-black shadow-[0_18px_48px_-22px_rgba(247,200,0,0.7)] hover:translate-y-[-1px] hover:shadow-[0_26px_68px_-22px_rgba(247,200,0,0.8)] active:translate-y-[0px]",
         outline:
-          "bg-transparent text-foreground hover:bg-white/10 hover:shadow-[0_12px_30px_-24px_rgba(247,200,0,0.5)]",
+          "bg-white/5 text-foreground border border-white/15 hover:border-[hsl(var(--primary))]/50 hover:bg-white/10 hover:shadow-[0_18px_42px_-28px_rgba(247,200,0,0.55)]",
       },
       size: {
         sm: "px-4 py-2 text-sm",

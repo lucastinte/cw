@@ -10,8 +10,9 @@ export const siteData = {
     name: "Cristian Wosniak",
     tagline: "Coach · CW Life",
   },
-  whatsappUrl: "https://wa.me/5491155555555?text=Quiero%20empezar%20con%20CW%20Life",
+  whatsappUrl: "https://wa.me/5493884384713?text=Quiero%20un%20plan%20de%20120",
   nav: [
+    { label: "Sobre mí", href: "/sobre-mi", target: "_blank" },
     { label: "Programas", href: "#programas" },
     { label: "Transformaciones", href: "#transformaciones" },
     { label: "Planes", href: "#planes" },
@@ -26,8 +27,42 @@ export const siteData = {
     chips: ["Plan a medida", "Seguimiento", "Hábitos"],
     primaryCta: "Agendar por WhatsApp",
     secondaryCta: "Ver planes",
-    image: "/hombre-entrenando-en-la-vista-frontal-del-gimnasio.jpg",
+    image: "/hero-principal.jpg",
     fallback: "https://source.unsplash.com/1600x2000/?fitness,coach,personal-trainer",
+  },
+  about: {
+    badge: "Sobre mí",
+    name: "Cristian Wosniak",
+    role: "CEO y Fundador de CW Life",
+    headline:
+      "Coach, entrenador y visionario detrás de un ecosistema creado para transformar cuerpos, mentes y estilos de vida.",
+    mission:
+      "Creé CW Life desde cero con un propósito claro: ayudar a las personas a vivir mejor a través del entrenamiento personalizado, la nutrición consciente, el poder de la fe y experiencias únicas donde el bienestar se vive todos los días.",
+    vision:
+      "Mi pasión por el crecimiento personal, el turismo, la salud y el desarrollo espiritual me impulsa a liderar un movimiento que busca llevar CW Life a lo más alto del fitness mundial.",
+    storyTitle: "Reconstruirme para reconstruir vidas",
+    story:
+      "Nací con alma de líder. Mientras guiaba a otros, yo mismo atravesé una fuerte adicción. Perdí tiempo y energía, pero nunca el propósito. Decidí reconstruirme sin excusas, con disciplina, fe y visión. Hoy lidero CW Life para acompañar a otros a ser protagonistas de su historia.",
+    mantra: "No vendo fitness. Construyo futuros. Entrenar es solo el comienzo.",
+    history:
+      "Desde chico el movimiento fue mi forma de conectar conmigo mismo. Hace más de 30 años entreno, aprendo y enseño. Viví dudas, frustraciones y grandes logros, por eso entiendo lo que cada persona necesita cuando decide transformarse. CW Life nació para acompañar procesos reales, con entrenamientos que se adaptan a vos y una comunidad que te impulsa.",
+    contactNote:
+      "Nuestra página histórica CristianWosniakEntrena está en recuperación; seguí las páginas oficiales para estar al día.",
+    socials: [
+      { label: "Facebook", handle: "Cristian Wosniak - CW Life" },
+      { label: "Facebook", handle: "CW Life Entrenador Oficial" },
+      { label: "Facebook (histórica)", handle: "CristianWosniakEntrena - recuperando acceso" },
+      { label: "Instagram", handle: "CW Life Entrenador Oficial" },
+      { label: "TikTok", handle: "CW Life" },
+      { label: "Twitter", handle: "CW Life" },
+      { label: "LinkedIn", handle: "Cristian Wosniak" },
+    ],
+    contactEmail: "jujuyentrena@gmail.com",
+    contactPhone: "+54 9 3884 38-4713",
+    images: {
+      main: "/Captura de pantalla 2025-12-26 a la(s) 6.03.27 p. m..png",
+      secondary: "/Captura de pantalla 2025-12-26 a la(s) 6.06.05 p. m..png",
+    },
   },
   sections: {
     about: {
@@ -136,7 +171,7 @@ export const siteData = {
   plans: [
     {
       name: "1 mes",
-      price: "$140.000",
+      price: "$120.000",
       highlight: false,
       note: "Incluye seguimiento y ajustes reales.",
       bullets: ["Arranque táctico y correcciones", "Plan personalizado + hábitos", "Feedback semanal"],
@@ -197,8 +232,8 @@ export const siteData = {
     ],
   },
   contact: {
-    phone: "+54 9 11 5555 5555",
-    email: "hola@cristianwosniakcoach.online",
+    phone: "+54 9 3884 38-4713",
+    email: "jujuyentrena@gmail.com",
     address: "Buenos Aires, Argentina",
     demo: "cw-umber.vercel.app",
   },

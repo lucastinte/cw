@@ -35,6 +35,8 @@ export function Header() {
               key={item.href}
               href={item.href}
               className="rounded-full px-3 py-2 text-sm font-medium text-muted-foreground transition hover:text-foreground"
+              target={item.target}
+              rel={item.target === "_blank" ? "noreferrer" : undefined}
             >
               {item.label}
             </Link>
@@ -72,6 +74,8 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className="rounded-2xl px-4 py-3 text-sm font-semibold text-foreground transition hover:bg-white/10"
+                target={item.target}
+                rel={item.target === "_blank" ? "noreferrer" : undefined}
                 onClick={() => setOpen(false)}
               >
                 {item.label}

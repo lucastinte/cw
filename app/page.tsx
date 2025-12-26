@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowUpRight, HeartPulse, Sparkles } from "lucide-react";
 
+import { About } from "@/components/About";
 import { FAQAccordion } from "@/components/faq-accordion";
 import { Header } from "@/components/header";
 import { Hero } from "@/components/Hero";
@@ -21,6 +22,7 @@ export default function HomePage() {
 
       <main className="space-y-24 pb-24">
         <Hero />
+        <About />
 
         <section id="programas" className="container max-w-6xl space-y-10 px-6">
           <Reveal className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -33,7 +35,7 @@ export default function HomePage() {
               </h2>
               <p className="text-lg text-muted-foreground">{siteData.sections.process.description}</p>
             </div>
-            <ShineButton asChild>
+            <ShineButton asChild className="w-auto px-6">
               <Link href={siteData.whatsappUrl} target="_blank" rel="noreferrer">
                 {siteData.sections.process.cta}
               </Link>
@@ -50,7 +52,7 @@ export default function HomePage() {
               </h3>
               <p className="text-base text-muted-foreground">{siteData.sections.programs.description}</p>
             </div>
-            <ShineButton asChild variant="outline">
+            <ShineButton asChild variant="outline" className="w-auto px-6">
               <Link href={siteData.whatsappUrl} target="_blank" rel="noreferrer">
                 {siteData.hero.primaryCta}
               </Link>
