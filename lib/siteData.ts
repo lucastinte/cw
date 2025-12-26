@@ -187,7 +187,9 @@ export const siteData = {
   ],
   media: {
     video: "",
+    useRemote: false,
     randomQueries: ["fitness", "gym", "athlete", "workout"],
+    localImages: ["/cristian.webp", "/og-default.svg", "/og-default.svg", "/og-default.svg"],
   },
   contact: {
     phone: "+54 9 11 5555 5555",

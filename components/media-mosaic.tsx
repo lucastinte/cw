@@ -16,8 +16,15 @@ const randomUnsplashUrls = (count: number) => {
   });
 };
 
+const getSources = () => {
+  const localSources = siteData.media.localImages?.filter(Boolean) ?? [];
+  if (!siteData.media.useRemote && localSources.length) return localSources;
+  const remote = randomUnsplashUrls(4);
+  return remote.length ? remote : localSources;
+};
+
 export function MediaMosaic({ className }: { className?: string }) {
-  const images = useMemo(() => randomUnsplashUrls(4), []);
+  const images = useMemo(() => getSources(), []);
   const videoSrc = siteData.media.video;
 
   return (
@@ -38,7 +45,7 @@ export function MediaMosaic({ className }: { className?: string }) {
       ) : null}
       {images.map((src, idx) => (
         <div
-          key={src}
+          key={`${src}-${idx}`}
           className={cn(
             "relative overflow-hidden rounded-3xl border border-[hsl(var(--primary))]/25 bg-muted/50 shadow-lg shadow-black/30",
             videoSrc
