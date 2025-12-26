@@ -17,8 +17,8 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[hsl(var(--border))]/40 bg-background/80 backdrop-blur-xl">
-      <div className="container flex items-center justify-between py-4">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-lg shadow-[0_8px_30px_rgba(0,0,0,0.35)]">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
         <Link href="#hero" className="flex items-center gap-3">
           <span className="rounded-full bg-[hsl(var(--primary))]/15 px-4 py-2 text-lg font-accent text-[hsl(var(--primary))]">
             {siteData.brand.short}
@@ -29,12 +29,12 @@ export function Header() {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-2 lg:flex">
+        <nav className="hidden items-center gap-1 lg:flex">
           {siteData.nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition hover:text-foreground"
+              className="rounded-full px-3 py-2 text-sm font-medium text-muted-foreground transition hover:text-foreground"
             >
               {item.label}
             </Link>
@@ -44,9 +44,10 @@ export function Header() {
         <div className="hidden items-center gap-3 lg:flex">
           <Link
             href="#planes"
-            className="rounded-full border border-[hsl(var(--border))]/40 px-4 py-2 text-sm font-semibold text-foreground transition hover:border-[hsl(var(--primary))]/50 hover:bg-[hsl(var(--primary))]/10"
+            className="shrink-0 inline-flex h-10 items-center justify-center rounded-full border border-white/20 px-4 text-sm font-semibold text-white/90 transition hover:border-[rgba(247,200,0,.6)] hover:bg-white/5 whitespace-nowrap"
           >
-            Ver planes
+            <span className="hidden sm:inline">Ver planes</span>
+            <span className="sm:hidden">Planes</span>
           </Link>
           <ShineButton asChild>
             <Link href={siteData.whatsappUrl} target="_blank" rel="noreferrer">
@@ -56,7 +57,7 @@ export function Header() {
         </div>
 
         <button
-          className="inline-flex items-center rounded-full border border-[hsl(var(--border))]/40 p-2 text-foreground lg:hidden"
+          className="inline-flex items-center rounded-full border border-white/20 p-2 text-foreground lg:hidden"
           onClick={() => setOpen((prev) => !prev)}
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
         >
@@ -64,13 +65,13 @@ export function Header() {
         </button>
       </div>
       {open ? (
-        <div className="border-t border-[hsl(var(--border))]/40 bg-background/95 px-4 pb-4 pt-2 lg:hidden">
+        <div className="border-t border-white/10 bg-black/90 px-4 pb-4 pt-2 backdrop-blur lg:hidden">
           <div className="flex flex-col gap-2">
             {siteData.nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-2xl px-4 py-3 text-sm font-semibold text-foreground transition hover:bg-[hsl(var(--primary))]/10"
+                className="rounded-2xl px-4 py-3 text-sm font-semibold text-foreground transition hover:bg-white/10"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
