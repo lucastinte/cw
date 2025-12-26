@@ -35,7 +35,7 @@ export function MediaMosaic({ className }: { className?: string }) {
             className="object-cover transition duration-700 hover:scale-105"
             priority={idx === 0}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/10 to-transparent" />
         </div>
       ))}
     </div>

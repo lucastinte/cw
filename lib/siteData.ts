@@ -26,8 +26,8 @@ export const siteData = {
     chips: ["Plan a medida", "Seguimiento", "Hábitos"],
     primaryCta: "Agendar por WhatsApp",
     secondaryCta: "Ver planes",
-    image: "https://images.unsplash.com/photo-1546484959-f9a9c6c72b01?auto=format&fit=crop&w=1600&q=80",
-    fallback: "https://source.unsplash.com/1600x2000/?fitness,coach",
+    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1600&q=80",
+    fallback: "https://source.unsplash.com/1600x2000/?fitness,coach,personal-trainer",
   },
   sections: {
     about: {
@@ -118,13 +118,13 @@ export const siteData = {
       name: "Juli",
       quote: "Recuperé energía y confianza. La técnica y la nutrición fueron clave para mantener el ritmo.",
       rating: 5,
-      image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
+      image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80&sat=-10",
     },
     {
       name: "Agus",
       quote: "Seguimiento cercano y ajustes reales. En pocas semanas ya veía progresión en fuerza y control.",
       rating: 5,
-      image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80&sat=-20",
+      image: "https://images.unsplash.com/photo-1517960413843-0aee8e2b3285?auto=format&fit=crop&w=1200&q=80",
     },
     {
       name: "Luis",
@@ -192,8 +192,8 @@ export const siteData = {
     localGallery: [
       "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80",
       "https://images.unsplash.com/photo-1445384763658-0400939829cd?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1546484959-f9a9c6c72b01?auto=format&fit=crop&w=1400&q=80",
-      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80&sat=-20",
+      "https://images.unsplash.com/photo-1517960413843-0aee8e2b3285?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1554344058-8d1d1bc7b531?auto=format&fit=crop&w=1400&q=80",
     ],
   },
   contact: {

@@ -74,8 +74,8 @@ export function Hero() {
               sizes="(min-width: 1024px) 540px, 100vw"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/25 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary))]/14 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/15 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary))]/10 via-transparent to-transparent" />
           </div>
         </Reveal>
       </div>
