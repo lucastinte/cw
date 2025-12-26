@@ -118,16 +118,19 @@ export const siteData = {
       name: "Juli",
       quote: "Recuperé energía y confianza. La técnica y la nutrición fueron clave para mantener el ritmo.",
       rating: 5,
+      image: "/trans-1.jpg",
     },
     {
       name: "Agus",
       quote: "Seguimiento cercano y ajustes reales. En pocas semanas ya veía progresión en fuerza y control.",
       rating: 5,
+      image: "/trans-2.jpg",
     },
     {
       name: "Luis",
       quote: "Volví a entrenar sin dolor y con un plan claro. La comunicación por WhatsApp marca la diferencia.",
       rating: 5,
+      image: "/trans-3.jpg",
     },
   ],
   plans: [
@@ -185,8 +188,8 @@ export const siteData = {
   ],
   media: {
     heroFallbackQueries: ["fitness", "coach"],
-    useRemote: true,
-    localGallery: ["/cristian.jpg", "/og-default.svg", "/og-default.svg", "/og-default.svg"],
+    useRemote: false,
+    localGallery: ["/cristian.jpg", "/trans-1.jpg", "/trans-2.jpg", "/trans-3.jpg"],
   },
   contact: {
     phone: "+54 9 11 5555 5555",
