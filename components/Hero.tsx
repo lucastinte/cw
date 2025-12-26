@@ -32,7 +32,10 @@ export function Hero() {
             <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
               {siteData.hero.manifesto}
             </p>
-            <h1 className="text-4xl font-semibold leading-[1.05] sm:text-5xl">{siteData.hero.title}</h1>
+            <h1 className="text-4xl leading-[1.05] sm:text-5xl">
+              <span className="font-accent text-[hsl(var(--primary))]">Cristian Wosniak</span>
+              <span className="block font-semibold text-foreground">Coach</span>
+            </h1>
             <p className="text-xl text-muted-foreground sm:text-2xl">{siteData.hero.subtitle}</p>
           </div>
           <div className="flex flex-wrap gap-3">
