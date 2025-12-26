@@ -6,7 +6,6 @@ import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import { ShineButton } from "@/components/shine-button";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { siteData } from "@/lib/siteData";
 
 const getHeroImage = () => {
@@ -19,26 +18,28 @@ export function Hero() {
   const heroImg = getHeroImage();
 
   return (
-    <section id="hero" className="relative overflow-hidden pt-10">
-      <div className="container max-w-6xl grid gap-10 rounded-[32px] bg-gradient-to-br from-black/70 via-[#0f0f0f] to-[#16130c] px-6 py-12 shadow-[0_28px_90px_-60px_rgba(247,200,0,0.45)] md:grid-cols-[1.05fr,0.95fr] md:px-12">
+    <section id="hero" className="relative overflow-hidden pt-12">
+      <div className="pointer-events-none absolute inset-0 -z-10 opacity-70">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(247,200,0,0.15),transparent_40%),radial-gradient(circle_at_80%_50%,rgba(247,200,0,0.08),transparent_45%)]" />
+      </div>
+
+      <div className="container max-w-6xl grid gap-10 px-6 md:grid-cols-2 md:items-center">
         <Reveal className="space-y-6">
-          <Badge variant="outline" className="border-[hsl(var(--primary))]/50 text-[hsl(var(--primary))]">
+          <Badge variant="outline" className="border-[hsl(var(--border))]/70 text-[hsl(var(--primary))]">
             CW Life
           </Badge>
           <div className="space-y-4">
             <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">
               {siteData.hero.manifesto}
             </p>
-            <h1 className="text-4xl font-semibold leading-[1.05] sm:text-5xl">
-              {siteData.hero.title}
-            </h1>
+            <h1 className="text-4xl font-semibold leading-[1.05] sm:text-5xl">{siteData.hero.title}</h1>
             <p className="text-xl text-muted-foreground sm:text-2xl">{siteData.hero.subtitle}</p>
           </div>
           <div className="flex flex-wrap gap-3">
             {siteData.hero.chips.map((chip) => (
               <Badge
                 key={chip}
-                className="rounded-full border border-[hsl(var(--border))]/70 bg-transparent px-3 py-2 text-[hsl(var(--primary))]"
+                className="rounded-full bg-white/5 px-3 py-2 text-[hsl(var(--primary))] transition hover:bg-white/10"
                 variant="outline"
               >
                 {chip}
@@ -52,15 +53,16 @@ export function Hero() {
               </Link>
             </ShineButton>
             <ShineButton asChild size="lg" variant="outline">
-              <Link href="#planes" className="justify-center">
-                {siteData.hero.secondaryCta}
+              <Link href="#planes" className="justify-center whitespace-nowrap">
+                <span className="hidden sm:inline">{siteData.hero.secondaryCta}</span>
+                <span className="sm:hidden">Planes</span>
               </Link>
             </ShineButton>
           </div>
         </Reveal>
 
-        <Reveal delay={0.08} className="relative">
-          <div className="relative h-[380px] overflow-hidden rounded-[28px] bg-[#111] soft-shadow sm:h-[460px] md:h-[520px]">
+        <Reveal delay={0.08} className="relative h-[420px] overflow-hidden rounded-3xl sm:h-[500px]">
+          <div className="absolute inset-0">
             <Image
               src={heroImg}
               alt="Cristian Wosniak"
@@ -69,27 +71,18 @@ export function Hero() {
               sizes="(min-width: 1024px) 540px, 100vw"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary))]/12 via-transparent to-transparent" />
-            <div className="absolute bottom-4 left-4 rounded-2xl border border-[hsl(var(--primary))]/40 bg-black/60 px-4 py-3 text-sm text-foreground backdrop-blur">
-              <p className="font-semibold">{siteData.brand.name}</p>
-              <p className="text-muted-foreground">{siteData.brand.tagline}</p>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/25 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary))]/14 via-transparent to-transparent" />
           </div>
         </Reveal>
       </div>
 
-      <div className="container max-w-6xl mt-8 grid gap-4 md:grid-cols-3">
+      <div className="container max-w-6xl mt-12 grid gap-6 px-6 md:grid-cols-3">
         {siteData.steps.map((step, idx) => (
-          <Reveal delay={0.05 * idx} key={step.title}>
-            <Card className="border border-[hsl(var(--border))]/50 bg-card/70 transition hover:-translate-y-1 hover:border-[hsl(var(--primary))]/70 hover:shadow-[0_18px_60px_-50px_rgba(247,200,0,0.5)]">
-              <CardHeader className="space-y-2">
-                <CardTitle className="text-lg text-[hsl(var(--primary))]">0{idx + 1}</CardTitle>
-                <CardTitle className="text-xl">{step.title}</CardTitle>
-                <CardDescription className="text-base text-muted-foreground">{step.description}</CardDescription>
-              </CardHeader>
-              <CardContent></CardContent>
-            </Card>
+          <Reveal delay={0.05 * idx} key={step.title} className="rounded-2xl bg-white/5 px-4 py-5">
+            <div className="text-sm font-semibold text-[hsl(var(--primary))]">0{idx + 1}</div>
+            <div className="text-lg font-semibold">{step.title}</div>
+            <p className="text-sm text-muted-foreground">{step.description}</p>
           </Reveal>
         ))}
       </div>
