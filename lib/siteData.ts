@@ -27,7 +27,7 @@ export const siteData = {
     primaryCta: "Agendar por WhatsApp",
     secondaryCta: "Ver planes",
     image: "/cristian.jpg",
-    fallback: "https://source.unsplash.com/1200x1600/?fitness,coach",
+    fallback: "https://source.unsplash.com/1600x2000/?fitness,coach",
   },
   sections: {
     about: {
@@ -118,19 +118,19 @@ export const siteData = {
       name: "Juli",
       quote: "Recuperé energía y confianza. La técnica y la nutrición fueron clave para mantener el ritmo.",
       rating: 5,
-      image: "/trans-1.jpg",
+      image: "https://source.unsplash.com/1200x900/?fitness,athlete,woman&sig=101",
     },
     {
       name: "Agus",
       quote: "Seguimiento cercano y ajustes reales. En pocas semanas ya veía progresión en fuerza y control.",
       rating: 5,
-      image: "/trans-2.jpg",
+      image: "https://source.unsplash.com/1200x900/?gym,man,training&sig=102",
     },
     {
       name: "Luis",
       quote: "Volví a entrenar sin dolor y con un plan claro. La comunicación por WhatsApp marca la diferencia.",
       rating: 5,
-      image: "/trans-3.jpg",
+      image: "https://source.unsplash.com/1200x900/?fitness,coach,man&sig=103",
     },
   ],
   plans: [
@@ -188,7 +188,7 @@ export const siteData = {
   ],
   media: {
     heroFallbackQueries: ["fitness", "coach"],
-    useRemote: false,
+    useRemote: true,
     localGallery: ["/cristian.jpg", "/trans-1.jpg", "/trans-2.jpg", "/trans-3.jpg"],
   },
   contact: {
