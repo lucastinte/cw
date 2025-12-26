@@ -26,7 +26,7 @@ export const siteData = {
     chips: ["Plan a medida", "Seguimiento", "Hábitos"],
     primaryCta: "Agendar por WhatsApp",
     secondaryCta: "Ver planes",
-    image: "/cristian.jpg",
+    image: "https://images.unsplash.com/photo-1546484959-f9a9c6c72b01?auto=format&fit=crop&w=1600&q=80",
     fallback: "https://source.unsplash.com/1600x2000/?fitness,coach",
   },
   sections: {
@@ -118,19 +118,19 @@ export const siteData = {
       name: "Juli",
       quote: "Recuperé energía y confianza. La técnica y la nutrición fueron clave para mantener el ritmo.",
       rating: 5,
-      image: "https://source.unsplash.com/1200x900/?fitness,athlete,woman&sig=101",
+      image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
     },
     {
       name: "Agus",
       quote: "Seguimiento cercano y ajustes reales. En pocas semanas ya veía progresión en fuerza y control.",
       rating: 5,
-      image: "https://source.unsplash.com/1200x900/?gym,man,training&sig=102",
+      image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80&sat=-20",
     },
     {
       name: "Luis",
       quote: "Volví a entrenar sin dolor y con un plan claro. La comunicación por WhatsApp marca la diferencia.",
       rating: 5,
-      image: "https://source.unsplash.com/1200x900/?fitness,coach,man&sig=103",
+      image: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=1200&q=80",
     },
   ],
   plans: [
@@ -189,7 +189,12 @@ export const siteData = {
   media: {
     heroFallbackQueries: ["fitness", "coach"],
     useRemote: true,
-    localGallery: ["/cristian.jpg", "/trans-1.jpg", "/trans-2.jpg", "/trans-3.jpg"],
+    localGallery: [
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1445384763658-0400939829cd?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1546484959-f9a9c6c72b01?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=80&sat=-20",
+    ],
   },
   contact: {
     phone: "+54 9 11 5555 5555",
